@@ -2,8 +2,42 @@ import torch
 import torchvision
 import torch.nn as nn
 from models.ResBlock import SemiResnetBlock_bn, ResnetBlock_bn, SemiResnetBlock, ResnetBlock
-from mmdet.ops.dcn.deform_conv import DeformConv, DCN_sep
+# import mmdet.ops.dcn.deform_conv as dc# DeformConv, ModulatedDeformConv
+from mmdet.ops.dcn.deform_conv import DeformConv, ModulatedDeformConv, _pair, modulated_deform_conv
 import torch.nn.functional as F
+
+class DCN_sep(ModulatedDeformConv):
+
+    def __init__(self, *args, **kwargs):
+        super(DCN_sep, self).__init__(*args, **kwargs)
+
+        self.conv_offset_mask = nn.Conv2d(
+            self.in_channels,
+            self.deformable_groups * 3 * self.kernel_size[0] *
+            self.kernel_size[1],
+            kernel_size=self.kernel_size,
+            stride=_pair(self.stride),
+            padding=_pair(self.padding),
+            bias=True)
+        self.init_offset()
+
+    def init_offset(self):
+        self.conv_offset_mask.weight.data.zero_()
+        self.conv_offset_mask.bias.data.zero_()
+
+    def forward(self, x, fea):
+        out = self.conv_offset_mask(fea)
+        o1, o2, mask = torch.chunk(out, 3, dim=1)
+        offset = torch.cat((o1, o2), dim=1)
+
+        offset_mean = torch.mean(torch.abs(offset))
+        if offset_mean > 100:
+            print('Offset mean is {}, larger than 100.'.format(offset_mean))
+
+        mask = torch.sigmoid(mask)
+        return modulated_deform_conv(x, offset, mask, self.weight, self.bias,
+                                     self.stride, self.padding, self.dilation,
+                                     self.groups, self.deformable_groups)
 
 
 class ReVggBlock(nn.Module):

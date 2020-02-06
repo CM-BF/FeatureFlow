@@ -109,10 +109,12 @@ class SeDraw_vimeo90k(data.Dataset):
 
         # Populate the list with image paths for all the
         # frame in `root`.
-        train_f = open(root + '/tri_trainlist.txt', 'r')
-        test_f = open(root + '/tri_testlist.txt', 'r')
-        self.train_path = train_f.read().split('\n')
-        self.train_path = [item for item in self.train_path if item != '']
+        if train:
+            train_f = open(os.path.join(root, 'tri_trainlist.txt'), 'r')
+        test_f = open(os.path.join(root, 'tri_testlist.txt'), 'r')
+        if train:
+            self.train_path = train_f.read().split('\n')
+            self.train_path = [item for item in self.train_path if item != '']
         test_val_path = test_f.read().split('\n')
         self.test_path = [item for index, item in enumerate(test_val_path) if item != '']
         self.validation_path = [item for index, item in enumerate(test_val_path) if index % 100 == 0 and item != '']
