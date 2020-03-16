@@ -26,3 +26,12 @@ pip list | grep mmdet
 * cp input/* sequences/ -r
 * Download BDCN's pre-trained model:bdcn_pretrained_on_bsds500.pth to ./model/bdcn/final-model/
 * pip install scikit-image visdom tqdm prefetch-generator
+run with:
+`CUDA_VISIBLE_DEVICES=0 python eval_Vimeo90K.py --checkpoint ./checkpoints/SeDraw29.ckpt --dataset_root ~/datasets/videos/vimeo_interp_test --visdom_env test --vimeo90k --imgpath ./results/`
+
+# video processing
+```python
+CUDA_VISIBLE_DEVICES=0 python video_process.py --checkpoint checkpoints/SeDraw29.ckpt --video_name ./youtube-35d8xb6ymp4_Ocw3.mp4  --fix_range
+```
+
+
