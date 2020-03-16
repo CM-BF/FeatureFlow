@@ -6,14 +6,14 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 
 ## Table of Contents
 
-1. [Requirements](#Requirements)
-1. [Demos](#Video demos)
-1. [Installation](#Installation)
-1. [Pre-trained Model](#Pre-trained-Model)
-1. [Download Results](#Download-Results)
-1. [Evaluation](#Evaluation)
-1. [Test your video](#Test-your-video)
-1. [Citation](#Citation)
+1. [Requirements](#requirements)
+1. [Demos](#video-demos)
+1. [Installation](#installation)
+1. [Pre-trained Model](#pre-trained-model)
+1. [Download Results](#download-results)
+1. [Evaluation](#evaluation)
+1. [Test your video](#test-your-video)
+1. [Citation](#citation)
 
 ## Requirements
 
