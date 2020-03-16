@@ -10,7 +10,7 @@ CVPR 2020: FeatureFlow: Robust Video Interpolation via Structure-to-texture Gene
 
 ## Video demos
 
-[![video1](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.png)](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.mp4 "video1")
+[<img width="160" height="90" src="https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.png"/>](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.mp4 "video1")
 
 ## Steps
 * clone this repo
