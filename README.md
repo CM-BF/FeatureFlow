@@ -8,9 +8,9 @@ CVPR 2020: FeatureFlow: Robust Video Interpolation via Structure-to-texture Gene
 * mmdet 1.0rc (from https://github.com/open-mmlab/mmdetection.git)
 * visdom *
 
-## Examples
+## Video demos
 
-[![IMAGE ALT TEXT](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.png)](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.mp4)
+[![video1](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.png)](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.mp4 "video1")
 
 ## Steps
 * clone this repo
