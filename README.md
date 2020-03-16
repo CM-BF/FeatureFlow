@@ -2,6 +2,8 @@
 
 A state-of-the-art Video Frame Interpolation Method using deep semantic flows blending.
 
+CVPR 2020: FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation
+
 * PyTorch 1.1 or higher
 * mmdet 1.0rc (from https://github.com/open-mmlab/mmdetection.git)
 * visdom
