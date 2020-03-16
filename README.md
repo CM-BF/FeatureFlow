@@ -11,11 +11,12 @@ CVPR 2020: FeatureFlow: Robust Video Interpolation via Structure-to-texture Gene
 ## Video demos
 
 Click the picture to Download one of them or click [Here](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX) to download all.
-[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.png"/>](https://github.com/CM-BF/FeatureFlow/blob/master/videos/youtube.mp4 "video1")
-[<img width="320" height="180" src="https://github.com/CM-BF/storage/tree/master/videos/check_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/check_all.mp4 "video2")
-[<img width="320" height="180" src="https://github.com/CM-BF/storage/tree/master/videos/tianqi_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/tianqi_all.mp4 "video3")
-[<img width="320" height="180" src="https://github.com/CM-BF/storage/tree/master/videos/video.png"/>](https://github.com/CM-BF/storage/tree/master/videos/video.mp4 "video4")
-[<img width="320" height="180" src="https://github.com/CM-BF/storage/tree/master/videos/shana.png"/>](https://github.com/CM-BF/storage/tree/master/videos/shana.mp4 "video5")
+
+[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/youtube.png"/>](https://github.com/CM-BF/storage/tree/master/videos/youtube.mp4 "video1")
+[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/check_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/check_all.mp4 "video2")
+[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/tianqi_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/tianqi_all.mp4 "video3")
+[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/video.png"/>](https://github.com/CM-BF/storage/tree/master/videos/video.mp4 "video4")
+[<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/shana.png"/>](https://github.com/CM-BF/storage/tree/master/videos/shana.mp4 "video5")
 
 
 ## Steps
