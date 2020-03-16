@@ -17,7 +17,7 @@ pip install "git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonA
 pip install -v -e .  # or "python setup.py develop"
 pip list | grep mmdet
 ```
-* Download http://data.csail.mit.edu/tofu/testset/vimeo_interp_test.zip
+* Download [test set](http://data.csail.mit.edu/tofu/testset/vimeo_interp_test.zip)
 ```bash
 unzip it
 cd vimeo_interp_test
@@ -32,7 +32,11 @@ pip install scikit-image visdom tqdm prefetch-generator
 
 ## Pre-trained Model
 
+[Google Drive](https://drive.google.com/open?id=1S8C0chFV6Bip6W9lJdZkog0T3xiNxbEx)
+
 ## Download Results
+
+[Google Drive](https://drive.google.com/open?id=1OtrExUiyIBJe0D6_ZwDfztqJBqji4lmt)
 
 ## Evaluation
 ```bash
@@ -44,4 +48,13 @@ CUDA_VISIBLE_DEVICES=0 python eval_Vimeo90K.py --checkpoint ./checkpoints/SeDraw
 CUDA_VISIBLE_DEVICES=0 python video_process.py --checkpoint checkpoints/SeDraw.ckpt --video_name ./youvideo.mp4  --fix_range
 ```
 
-
+## Cite
+```
+@InProceedings{FeatureFlow,
+author = {Gui, Shurui and Wang, Chaoyue and Chen, Qihua and Tao, Dacheng},
+title = {FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
+}
+```
