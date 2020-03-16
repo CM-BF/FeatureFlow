@@ -2,11 +2,27 @@
 
 A state-of-the-art Video Frame Interpolation Method using deep semantic flows blending.
 
-CVPR 2020: FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation
+FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEEE Conference on Computer Vision and Pattern Recognition 2020)
 
-* PyTorch 1.1 or higher
+## Table of Contents
+
+1. [Requirements](#Requirements)
+1. [Demos](#Video demos)
+1. [Installation](#Installation)
+1. [Pre-trained Model](#Pre-trained-Model)
+1. [Download Results](#Download-Results)
+1. [Evaluation](#Evaluation)
+1. [Test your video](#Test-your-video)
+1. [Citation](#Citation)
+
+## Requirements
+
+* Ubuntu
+* PyTorch (>=1.1) 
+* Cuda (>=10.0) & Cudnn (>=7.0)
 * mmdet 1.0rc (from https://github.com/open-mmlab/mmdetection.git)
-* visdom *
+* visdom (not necessary)
+* NVIDIA GPU
 
 ## Video demos
 
@@ -19,7 +35,7 @@ Click the picture to Download one of them or click [Here](https://drive.google.c
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/shana.png"/>](https://github.com/CM-BF/storage/tree/master/videos/shana.mp4 "video5")
 
 
-## Steps
+## Installation
 * clone this repo
 * git clone https://github.com/open-mmlab/mmdetection.git
 * install mmdetection: please follow the guidence in its github
@@ -58,9 +74,9 @@ Place FeFlow.ckpt to ./checkpoints/.
 $ CUDA_VISIBLE_DEVICES=0 python eval_Vimeo90K.py --checkpoint ./checkpoints/FeFlow.ckpt --dataset_root ~/datasets/videos/vimeo_interp_test --visdom_env test --vimeo90k --imgpath ./results/
 ```
 
-## Video processing
+## Test your video
 ```bash
-$ CUDA_VISIBLE_DEVICES=0 python video_process.py --checkpoint checkpoints/FeFlow.ckpt --video_name ./youvideo.mp4  --fix_range
+$ CUDA_VISIBLE_DEVICES=0 python video_process.py --checkpoint checkpoints/FeFlow.ckpt --video_name ./yourvideo.mp4  --fix_range
 ```
 
 ## Citation
