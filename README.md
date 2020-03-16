@@ -26,7 +26,8 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 
 ## Video demos
 
-Click the picture to Download one of them or click [Here](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX) to download all.
+Click the picture to Download one of them or click [Here(Google)](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX)/[Here(Baidu)](https://pan.baidu.com/s/1J9seoqgC2p9zZ7pegMlH1A)(key: oav2) to download all.
+
 
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/youtube.png"/>](https://github.com/CM-BF/storage/tree/master/videos/youtube.mp4 "video1")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/check_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/check_all.mp4 "video2")
@@ -63,11 +64,15 @@ $ pip install scikit-image visdom tqdm prefetch-generator
 
 [Google Drive](https://drive.google.com/open?id=1S8C0chFV6Bip6W9lJdZkog0T3xiNxbEx)
 
+[Baidu Cloud](https://pan.baidu.com/s/1LxVw-89f3GX5r0mZ6wmsJw): ae4x
+
 Place FeFlow.ckpt to ./checkpoints/.
 
 ## Download Results
 
 [Google Drive](https://drive.google.com/open?id=1OtrExUiyIBJe0D6_ZwDfztqJBqji4lmt)
+
+[Baidu Cloud](链接：https://pan.baidu.com/s/1BaJJ82nSKagly6XZ8KNtAw): pc0k
 
 ## Evaluation
 ```bash
