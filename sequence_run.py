@@ -97,8 +97,8 @@ def IndexHelper(i, digit):
 
 def VideoToSequence(path, time):
     video = cv2.VideoCapture(path)
-    dir_path = path.split('.')
-    dir_path = dir_path[0]
+    dir_path = 'frames_tmp'
+    os.system("rm -rf %s" % dir_path)
     os.mkdir(dir_path)
     fps = int(video.get(cv2.CAP_PROP_FPS))
     length = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -217,7 +217,7 @@ def main():
         # print('Average IE/PSNR:', IE, PSNR)
 
     output_fps = fps if args.slow_motion else args.t_interp*fps
-    os.system("ffmpeg -framerate " + str(output_fps) + " -pattern_type glob -i '" + dir_path + "/*.png' -pix_fmt yuv420p output_" + args.video_path)
+    os.system("ffmpeg -framerate " + str(output_fps) + " -pattern_type glob -i '" + dir_path + "/*.png' -pix_fmt yuv420p output.mp4")
     os.system("rm -rf %s" % dir_path)
 
 
