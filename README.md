@@ -81,8 +81,11 @@ $ CUDA_VISIBLE_DEVICES=0 python eval_Vimeo90K.py --checkpoint ./checkpoints/FeFl
 
 ## Test your video
 ```bash
-$ CUDA_VISIBLE_DEVICES=0 python video_process.py --checkpoint checkpoints/FeFlow.ckpt --video_name ./yourvideo.mp4  --fix_range
+$ CUDA_VISIBLE_DEVICES=0 python sequence_run.py --checkpoint checkpoints/FeFlow.ckpt --video_path ./yourvideo.mp4 --t_interp 4 --slow_motion
 ```
+`--t_interp` set the times of interpolating, only power of 2(2,4,8...) are supported. Use flag `--slow_motion` to slow down the video which maintains the original fps.
+
+The output video will be saved as output_yourvideo.mp4 in your working diractory. 
 
 ## Citation
 ```
