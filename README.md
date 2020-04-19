@@ -26,16 +26,18 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 
 ## Video demos
 
-Click the picture to Download one of them or click [Here(Google)](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX) or [Here(Baidu)](https://pan.baidu.com/s/1J9seoqgC2p9zZ7pegMlH1A)(key: oav2) to download all.
+Click the picture to Download one of them or click [Here(Google)](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX) or [Here(Baidu)](https://pan.baidu.com/s/1J9seoqgC2p9zZ7pegMlH1A)(key: oav2) to download **360p demos**.
 
-360p demos:
+**360p demos**(including comparisons):
+
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/youtube.png"/>](https://github.com/CM-BF/storage/tree/master/videos/youtube.mp4 "video1")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/check_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/check_all.mp4 "video2")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/tianqi_all.png"/>](https://github.com/CM-BF/storage/tree/master/videos/tianqi_all.mp4 "video3")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/video.png"/>](https://github.com/CM-BF/storage/tree/master/videos/video.mp4 "video4")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/shana.png"/>](https://github.com/CM-BF/storage/tree/master/videos/shana.mp4 "video5")
 
-720p demos:
+**720p demos**:
+
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/SYA_1.png"/>](https://github.com/CM-BF/storage/tree/master/videos/SYA_1.mp4 "video6")
 [<img width="320" height="180" src="https://github.com/CM-BF/FeatureFlow/blob/master/data/figures/SYA_2.png"/>](https://github.com/CM-BF/storage/tree/master/videos/SYA_2.mp4 "video7")
 
