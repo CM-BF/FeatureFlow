@@ -5,8 +5,8 @@ A state-of-the-art Video Frame Interpolation Method using deep semantic flows bl
 FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEEE Conference on Computer Vision and Pattern Recognition 2020)
 
 ## To Do List
-- [] Preprint
-- [] Training code
+- [ ] Preprint
+- [ ] Training code
 
 ## Table of Contents
 
