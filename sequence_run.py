@@ -32,6 +32,7 @@ parser.add_argument('--DE_pretrained', action='store_true', help='using this fla
 parser.add_argument('--DE_ckpt', type=str, help='path to DE checkpoint')
 parser.add_argument('--video_path', type=str, required=True)
 parser.add_argument('--t_interp', type=int, default=4, help='times of interpolating')
+parser.add_argument('--fps', type=int, default=-1, help='specify the fps.')
 parser.add_argument('--slow_motion', action='store_true', help='using this flag if you want to slow down the video and maintain fps.')
 
 args = parser.parse_args()
@@ -215,8 +216,10 @@ def main():
         # IE = IE / count
         # PSNR = PSNR / count
         # print('Average IE/PSNR:', IE, PSNR)
-
-    output_fps = fps if args.slow_motion else args.t_interp*fps
+    if args.fps != -1:
+        output_fps = args.fps
+    else:
+        output_fps = fps if args.slow_motion else args.t_interp*fps
     os.system("ffmpeg -framerate " + str(output_fps) + " -pattern_type glob -i '" + dir_path + "/*.png' -pix_fmt yuv420p output.mp4")
     os.system("rm -rf %s" % dir_path)
 

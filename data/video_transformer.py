@@ -38,11 +38,11 @@ class DataCreator(object):
         # pbar.set_description("Processing %s" % video_name)
 
         # read a video and create video_writer for lower fps video output
-        video = cv2.VideoCapture(self.videos_folder + video_name)
+        video = cv2.VideoCapture(os.path.join(self.videos_folder, video_name))
         fps = video.get(cv2.CAP_PROP_FPS)
         size = (int(video.get(cv2.CAP_PROP_FRAME_WIDTH)), int(video.get(cv2.CAP_PROP_FRAME_HEIGHT)))
         # fourcc = cv2.VideoWriter_fourcc(*'XVID')
-        fourcc = int(video.get(cv2.CAP_PROP_FOURCC))
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
         video_writer = [cv2.VideoWriter(self.tmp + video_name[:-4] + '_%s' % str(i) + '.mp4',
                                         fourcc,
                                         fps / self.lower_rate,
