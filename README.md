@@ -1,11 +1,13 @@
 # FeatureFlow
 
+[Paper](https://github.com/CM-BF/FeatureFlow/blob/master/FeatureFlow.pdf) | [Supp](https://github.com/CM-BF/FeatureFlow/blob/master/Supp.pdf)
+
 A state-of-the-art Video Frame Interpolation Method using deep semantic flows blending.
 
 FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEEE Conference on Computer Vision and Pattern Recognition 2020)
 
 ## To Do List
-- [ ] Preprint
+- [x] Preprint
 - [ ] Training code
 
 ## Table of Contents
