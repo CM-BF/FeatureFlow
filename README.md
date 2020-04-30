@@ -1,6 +1,6 @@
 # FeatureFlow
 
-[Paper](https://github.com/CM-BF/FeatureFlow/blob/master/FeatureFlow.pdf) | [Supp](https://github.com/CM-BF/FeatureFlow/blob/master/Supp.pdf)
+[Paper](https://github.com/CM-BF/FeatureFlow/blob/master/paper/FeatureFlow.pdf) | [Supp](https://github.com/CM-BF/FeatureFlow/blob/master/paper/Supp.pdf)
 
 A state-of-the-art Video Frame Interpolation Method using deep semantic flows blending.
 
