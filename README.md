@@ -8,7 +8,7 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 
 ## To Do List
 - [x] Preprint
-- [ ] Training code
+- [x] Training code
 
 ## Table of Contents
 
@@ -19,6 +19,7 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 1. [Download Results](#download-results)
 1. [Evaluation](#evaluation)
 1. [Test your video](#test-your-video)
+1. [Training](#training)
 1. [Citation](#citation)
 
 ## Requirements
@@ -97,6 +98,20 @@ $ CUDA_VISIBLE_DEVICES=0 python sequence_run.py --checkpoint checkpoints/FeFlow.
 `--t_interp` sets frame multiples, only power of 2(2,4,8...) are supported. Use flag `--slow_motion` to slow down the video which maintains the original fps.
 
 The output video will be saved as output.mp4 in your working diractory. 
+
+## Training
+
+Training Code **train.py** is available now. I can't run it for comfirmation now because I've left the Lab, but I'm sure it will work with right argument settings.
+
+```bash
+$ CUDA_VISIBLE_DEVICES=0,1 python train.py <arguments>
+```
+
+* Please read the arguments' help carefully to fully control the **two-step training**.
+* Pay attention to the `--GEN_DE` which is the flag to set the model to Stage-I or Stage-II.
+* 2 GPUs is necessary for training or the small batch\_size will cause training process crash.
+* Deformable CNN is not stable enough so that you may face training crash sometimes(I didn't fix the random seed), but it can be detected soon after the beginning of running by visualizing results using Visdom. 
+* Visdom visualization codes are included which is good for viewing training process and checking crash.
 
 ## Citation
 ```
