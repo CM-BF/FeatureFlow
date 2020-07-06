@@ -107,11 +107,11 @@ Training Code **train.py** is available now. I can't run it for comfirmation now
 $ CUDA_VISIBLE_DEVICES=0,1 python train.py <arguments>
 ```
 
-* Please read the arguments' help carefully to fully control the **two-step training**.
+* Please read the **arguments' help** carefully to fully control the **two-step training**.
 * Pay attention to the `--GEN_DE` which is the flag to set the model to Stage-I or Stage-II.
 * 2 GPUs is necessary for training or the small batch\_size will cause training process crash.
 * Deformable CNN is not stable enough so that you may face training crash sometimes(I didn't fix the random seed), but it can be detected soon after the beginning of running by visualizing results using Visdom. 
-* Visdom visualization codes are included which is good for viewing training process and checking crash.
+* Visdom visualization codes[line 75, 201-216 and 338-353] are included which is good for viewing training process and checking crash.
 
 ## Citation
 ```
