@@ -102,7 +102,7 @@ def _pil_loader(path, cropArea=None, resizeDim=None, frameFlip=0):
         return flipped_img.convert('RGB')
 
 
-class SeDraw_vimeo90k(data.Dataset):
+class FeFlow_vimeo90k(data.Dataset):
 
     def __init__(self, root, transform=None, dim=(448, 256), randomCropSize=(208, 208), train=True, test=False):
 
@@ -306,7 +306,7 @@ class UCI101Test(data.Dataset):
                 [I0, intermediate_frame, I1] and returnIndex is
                 the position of `intermediate_frame`.
                 The returnIndex is always 3 and is being returned
-                to maintain compatibility with the `SeDraw`
+                to maintain compatibility with the `FeFlow`
                 dataloader where 3 corresponds to the middle frame.
         """
 
@@ -351,7 +351,7 @@ class UCI101Test(data.Dataset):
         return fmt_str
 
 
-class SeDraw(data.Dataset):
+class FeFlow(data.Dataset):
     """
     A dataloader for loading N samples arranged in this way:
 
