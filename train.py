@@ -33,35 +33,35 @@ def str2bool(v):
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--dataset_root", type=str, required=True,
-                    help='path to dataset folder containing train-test-validation folders')
+                    help='[important]path to dataset folder containing train-test-validation folders')
 parser.add_argument("--checkpoint_dir", type=str, required=True, help='path to folder for saving checkpoints')
 parser.add_argument("--checkpoint", type=str, help='path of checkpoint for pretrained model')
 parser.add_argument("--train_continue", action='store_true',
                     help='If resuming from checkpoint, set to True and set `checkpoint` path. Default: False.')
-parser.add_argument("--epochs", type=int, default=200, help='number of epochs to train. Default: 200.')
+parser.add_argument("--epochs", type=int, default=200, help='[You can terminate program as our paper described]number of epochs to train. Default: 200.')
 parser.add_argument("--train_batch_size", type=int, default=6, help='batch size for training. Default: 6.')
-parser.add_argument("--validation_batch_size", type=int, default=10, help='batch size for validation. Default: 10.')
+parser.add_argument("--validation_batch_size", type=int, default=10, help='[It depends]batch size for validation. Default: 10.')
 parser.add_argument("--init_learning_rate", type=float, default=0.0001,
-                    help='set initial learning rate. Default: 0.0001.')
+                    help='[Require]set initial learning rate. Default: 0.0001.')
 parser.add_argument("--milestones", type=int, required=True, nargs='+',
                     help='Set to epoch values where you want to decrease learning rate by a factor of 0.1. '
                          'Default: [100, 150]')
 parser.add_argument("--progress_iter", type=int, default=100,
-                    help='frequency of reporting progress and validation. N: after every N iterations. Default: 100.')
+                    help='[Default]frequency of reporting progress and validation. N: after every N iterations. Default: 100.')
 parser.add_argument("--checkpoint_epoch", type=int, default=5,
                     help='checkpoint saving frequency. N: after every N epochs. Each checkpoint is roughly of '
                          'size 151 MB.Default: 5.')
 parser.add_argument('--visdom_env', type=str, default='FeFlow_0', help='Environment for visdom show')
-parser.add_argument('--vimeo90k', action='store_true', help='use this flag if using Vimeo-90K dataset')
-parser.add_argument('--GEN_DE', type=str2bool, nargs='?', const=True, default=False, help='True: train generator, False: train DE')
+parser.add_argument('--vimeo90k', action='store_true', help='[Must be used]use this flag if using Vimeo-90K dataset')
+parser.add_argument('--GEN_DE', type=str2bool, nargs='?', const=True, default=False, help='[Important]True: train generator, False: train DE')
 parser.add_argument('--test', action='store_true', help='if debug network by using 1 image, Default:False')
-parser.add_argument('--fp16', action='store_true', help='using apex for fp16')
+parser.add_argument('--fp16', action='store_true', help='[discarded]using apex for fp16')
 parser.add_argument("--local_rank", default=0, type=int)
-parser.add_argument('--feature_level', type=int, default=3, help='Using feature_level=? in GEN, Default:3')
+parser.add_argument('--feature_level', type=int, default=3, help='[Do not change it if you do not know what it means]Using feature_level=? in GEN, Default:3')
 parser.add_argument('--bdcn_model', default='./models/bdcn/final-model/bdcn_pretrained_on_bsds500.pth')
-parser.add_argument('--DE_pretrained', action='store_true', help='using this flag if training the model from pretrained parameters.')
+parser.add_argument('--DE_pretrained', action='store_true', help='[You do not need to use it for training.]using this flag if training the model from pretrained parameters.')
 parser.add_argument('--DE_ckpt', type=str, help='path to DE checkpoint')
-parser.add_argument('--final', action='store_true', help='True: train all together')
+parser.add_argument('--final', action='store_true', help='[Do not use it.]True: train all together')
 args = parser.parse_args()
 
 # for saving checkpoint
@@ -173,9 +173,9 @@ def validate():
             img1 = frame1.cuda()
             IFrame = frameT.cuda()
 
-            img0_e = img0 #torch.cat([img0, torch.tanh(bdcn(img0)[0])], dim=1)
-            img1_e = img1 #torch.cat([img1, torch.tanh(bdcn(img1)[0])], dim=1)
-            IFrame_e = IFrame #torch.cat([IFrame, torch.tanh(bdcn(IFrame)[0])], dim=1)
+            img0_e = torch.cat([img0, torch.tanh(bdcn(img0)[0])], dim=1)
+            img1_e = torch.cat([img1, torch.tanh(bdcn(img1)[0])], dim=1)
+            IFrame_e = torch.cat([IFrame, torch.tanh(bdcn(IFrame)[0])], dim=1)
 
             if args.final:
                 _, _, ref_imgt = structure_gen((img0_e, img1_e, IFrame_e))
@@ -308,9 +308,9 @@ for epoch in range(dict1['epoch'] + 1, args.epochs):
         img1 = frame1.cuda()
         IFrame = frameT.cuda()
 
-        img0_e = img0 #torch.cat([img0, torch.tanh(bdcn(img0)[0])], dim=1)
-        img1_e = img1 #torch.cat([img1, torch.tanh(bdcn(img1)[0])], dim=1)
-        IFrame_e = IFrame #torch.cat([IFrame, torch.tanh(bdcn(IFrame)[0])], dim=1)
+        img0_e = torch.cat([img0, torch.tanh(bdcn(img0)[0])], dim=1)
+        img1_e = torch.cat([img1, torch.tanh(bdcn(img1)[0])], dim=1)
+        IFrame_e = torch.cat([IFrame, torch.tanh(bdcn(IFrame)[0])], dim=1)
 
         if args.final:
             _, _, ref_imgt = structure_gen((img0_e, img1_e, IFrame_e))
