@@ -115,10 +115,10 @@ $ CUDA_VISIBLE_DEVICES=0,1 python train.py <arguments>
 
 ## Citation
 ```
-@InProceedings{FeatureFlow,
+@InProceedings{Gui_2020_CVPR,
 author = {Gui, Shurui and Wang, Chaoyue and Chen, Qihua and Tao, Dacheng},
-title = {FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation},
-booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+title = {FeatureFlow: Robust Video Interpolation via Structure-to-Texture Generation},
+booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
 month = {June},
 year = {2020}
 }
