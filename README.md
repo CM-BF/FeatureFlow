@@ -68,6 +68,9 @@ $ cp target/* sequences/ -r
 $ cp input/* sequences/ -r
 ```
 * Download BDCN's pre-trained model:bdcn_pretrained_on_bsds500.pth to ./model/bdcn/final-model/
+
+Ps: For your convenience, you can only download the bdcn_pretrained_on_bsds500.pth: [Google Drive](https://drive.google.com/file/d/1Zot0P8pSBawnehTE32T-8J0rjYq6CSAT/view?usp=sharing) or all of the pre-trained bdcn models its authors provided: [Google Drive](https://drive.google.com/file/d/1CmDMypSlLM6EAvOt5yjwUQ7O5w-xCm1n/view). For a Baidu Cloud link, you can resort to BDCN's GitHub repository.
+
 ```
 $ pip install scikit-image visdom tqdm prefetch-generator
 ```
