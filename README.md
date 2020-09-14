@@ -31,7 +31,7 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 * visdom (not necessary)
 * NVIDIA GPU
 
-Ps: `requirements.txt` is provided.
+Ps: `requirements.txt` is provided, but do not use it directly. It is just for reference because it contains another project's dependencies.
 
 ## Video demos
 
