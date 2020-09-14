@@ -31,6 +31,8 @@ FeatureFlow: Robust Video Interpolation via Structure-to-texture Generation (IEE
 * visdom (not necessary)
 * NVIDIA GPU
 
+Ps: `requirements.txt` is provided.
+
 ## Video demos
 
 Click the picture to Download one of them or click [Here(Google)](https://drive.google.com/open?id=1QUYoplBNjaWXJZPO90NiwQwqQz7yF7TX) or [Here(Baidu)](https://pan.baidu.com/s/1J9seoqgC2p9zZ7pegMlH1A)(key: oav2) to download **360p demos**.
